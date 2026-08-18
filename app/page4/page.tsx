@@ -9,9 +9,21 @@ export default function Page4() {
     toelichting: ""
   });
 
-  function handleSubmit() {
-    console.log(ervaring);
-  }
+//   function handleSubmit() {
+//     console.log(ervaring);
+//   }
+
+function handleSubmit() {
+  const bestaandeData = localStorage.getItem("formulier");
+  const formulier = bestaandeData ? JSON.parse(bestaandeData) : {};
+
+  const alles = {
+    ...formulier,
+    ...ervaring
+  };
+
+  console.log(alles);
+}
 
   return (
     <main className="min-h-screen bg-red-100 p-10">
