@@ -16,31 +16,31 @@ export default function Page4() {
           <div className="mt-5 grid grid-cols-7 gap-3">
             <label className="cursor-pointer">
               <input type="radio" name="ervaring" value="1" className="peer hidden" />
-              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-700 peer-checked:text-white">1</div>
+              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-red-900 peer-checked:text-white">1</div>
             </label>
             <label className="cursor-pointer">
               <input type="radio" name="ervaring" value="2" className="peer hidden" />
-              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-700 peer-checked:text-white">2</div>
+              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-red-900 peer-checked:text-white">2</div>
             </label>
             <label className="cursor-pointer">
               <input type="radio" name="ervaring" value="3" className="peer hidden" />
-              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-700 peer-checked:text-white">3</div>
+              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-red-900 peer-checked:text-white">3</div>
             </label>
             <label className="cursor-pointer">
               <input type="radio" name="ervaring" value="4" className="peer hidden" />
-              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-700 peer-checked:text-white">4</div>
+              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white">4</div>
             </label>
             <label className="cursor-pointer">
               <input type="radio" name="ervaring" value="5" className="peer hidden" />
-              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-700 peer-checked:text-white">5</div>
+              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white">5</div>
             </label>
             <label className="cursor-pointer">
               <input type="radio" name="ervaring" value="6" className="peer hidden" />
-              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-700 peer-checked:text-white"> 6</div>
+              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white"> 6</div>
             </label>
             <label className="cursor-pointer">
               <input type="radio" name="ervaring" value="7" className="peer hidden" />
-              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-700 peer-checked:text-white">7</div>
+              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white">7</div>
             </label>
           </div>
 
@@ -52,10 +52,11 @@ export default function Page4() {
 
         <section className="mt-12">
           <h2 className="text-xl font-bold">Voeg een toelichting toe en help ons verbeteren</h2>
-          <textarea className="mt-5 h-60 w-full rounded-3xl border p-5 text-lg" placeholder="Vertel ons wat je ervan vond..." />
+          <textarea className="mt-5 h-60 w-full rounded-3xl border p-5 bg-orange-100 text-lg" placeholder="Vertel ons wat je ervan vond..." />
         </section>
 
-        <Link href="/" className="mt-14 rounded-2xl bg-amber-900 px-12 py-5 text-lg font-semibold text-white">Indienen</Link>
+        <Link href="/" className="mt-20 inline-block rounded-2xl bg-amber-900 px-12 py-5 text-lg font-semibold text-white">Indienen</Link>
+     
       </div>
     </main>
   );
