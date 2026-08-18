@@ -8,7 +8,9 @@ export default function Page2() {
     tekst: ""
   });
 
+function handleNext() {
   console.log(situatie);
+}
 
   return (
     <main className="min-h-screen bg-red-100 p-10">
@@ -18,6 +20,7 @@ export default function Page2() {
           <p className="mt-4 text-lg">Hoe beter wij uw situatie begrijpen, hoe gerichter we kunnen adviseren</p>
         </div>
         <div className="p-10">
+
           <section>
             <h2 className="text-lg font-bold">Vertel kort iets over uw plannen</h2>
             <textarea
@@ -27,6 +30,7 @@ export default function Page2() {
               placeholder={'Bijvoorbeeld: "We willen onze bestaande stal vervangen door zes paardenboxen met een ruime wasplaats."'}
             />
           </section>
+          
           <section className="mt-8">
             <h2 className="text-lg font-bold">Voeg foto’s of tekeningen toe</h2>
             <p className="mt-3 text-lg">Heeft u al foto’s van de huidige situatie, een schets of bouwtekening? Upload deze gerust</p>
@@ -38,9 +42,9 @@ export default function Page2() {
               <input type="file" className="hidden" />
             </label>
           </section>
-          <Link href="/page3" className="mt-8 inline-block rounded-2xl bg-lime-700 px-8 py-4 text-neutral-100">
-            Naar uw gegevens
-          </Link>
+
+          <Link href="/page3" onClick={handleNext} className="mt-8 inline-block rounded-2xl bg-lime-700 px-8 py-4 text-neutral-100">Naar uw gegevens</Link>
+
         </div>
       </div>
     </main>

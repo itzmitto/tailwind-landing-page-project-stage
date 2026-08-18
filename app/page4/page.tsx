@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Page4() {
+  const [ervaring, setErvaring] = useState({
+    score: "",
+    toelichting: ""
+  });
+
+  function handleSubmit() {
+    console.log(ervaring);
+  }
+
   return (
     <main className="min-h-screen bg-red-100 p-10">
       <div className="mx-auto max-w-4xl rounded-3xl bg-white p-14 shadow-lg">
@@ -12,38 +24,44 @@ export default function Page4() {
         <section className="mt-20">
           <h2 className="text-xl font-bold">Hoe was je ervaring?</h2>
           <p className="mt-5 text-lg text-gray-600">het was makkelijk om mijn aanvraag in te dienen</p>
-
           <div className="mt-5 grid grid-cols-7 gap-3">
+
             <label className="cursor-pointer">
-              <input type="radio" name="ervaring" value="1" className="peer hidden" />
+              <input type="radio" name="ervaring" value="1" className="peer hidden" onChange={(e) => setErvaring({...ervaring, score: e.target.value})}/>
               <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-red-900 peer-checked:text-white">1</div>
             </label>
+
             <label className="cursor-pointer">
-              <input type="radio" name="ervaring" value="2" className="peer hidden" />
+              <input type="radio" name="ervaring" value="2" className="peer hidden" onChange={(e) => setErvaring({...ervaring, score: e.target.value})}/>
               <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-red-900 peer-checked:text-white">2</div>
             </label>
+
             <label className="cursor-pointer">
-              <input type="radio" name="ervaring" value="3" className="peer hidden" />
+              <input type="radio" name="ervaring" value="3" className="peer hidden" onChange={(e) => setErvaring({...ervaring, score: e.target.value})} />
               <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-red-900 peer-checked:text-white">3</div>
             </label>
+
             <label className="cursor-pointer">
-              <input type="radio" name="ervaring" value="4" className="peer hidden" />
+              <input type="radio" name="ervaring" value="4" className="peer hidden" onChange={(e) => setErvaring({...ervaring, score: e.target.value})} />
               <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white">4</div>
             </label>
+
             <label className="cursor-pointer">
-              <input type="radio" name="ervaring" value="5" className="peer hidden" />
+              <input type="radio" name="ervaring" value="5" className="peer hidden" onChange={(e) => setErvaring({...ervaring, score: e.target.value})} />
               <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white">5</div>
             </label>
+
             <label className="cursor-pointer">
-              <input type="radio" name="ervaring" value="6" className="peer hidden" />
-              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white"> 6</div>
+              <input type="radio" name="ervaring" value="6" className="peer hidden" onChange={(e) => setErvaring({...ervaring, score: e.target.value})}/>
+              <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white">6</div>
             </label>
+
             <label className="cursor-pointer">
-              <input type="radio" name="ervaring" value="7" className="peer hidden" />
+              <input type="radio" name="ervaring" value="7" className="peer hidden" onChange={(e) => setErvaring({...ervaring, score: e.target.value})}/>
               <div className="flex h-20 items-center justify-center rounded-xl border text-lg transition peer-checked:bg-lime-500 peer-checked:text-white">7</div>
             </label>
-          </div>
 
+          </div>
           <div className="mt-5 flex justify-between text-sm text-gray-500">
             <span>Sterk mee oneens</span>
             <span>Sterk mee eens</span>
@@ -52,11 +70,11 @@ export default function Page4() {
 
         <section className="mt-12">
           <h2 className="text-xl font-bold">Voeg een toelichting toe en help ons verbeteren</h2>
-          <textarea className="mt-5 h-60 w-full rounded-3xl border p-5 bg-orange-100 text-lg" placeholder="Vertel ons wat je ervan vond..." />
+          <textarea value={ervaring.toelichting} onChange={(e) => setErvaring({...ervaring, toelichting: e.target.value})} className="mt-5 h-60 w-full rounded-3xl border p-5 bg-orange-100 text-lg" placeholder="Vertel ons wat je ervan vond..." />
         </section>
 
-        <Link href="/" className="mt-20 inline-block rounded-2xl bg-amber-900 px-12 py-5 text-lg font-semibold text-white">Indienen</Link>
-     
+        <Link href="/" onClick={handleSubmit} className="mt-20 inline-block rounded-2xl bg-amber-900 px-12 py-5 text-lg font-semibold text-white">Indienen</Link>
+
       </div>
     </main>
   );

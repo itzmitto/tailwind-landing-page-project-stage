@@ -10,7 +10,9 @@ export default function Home() {
     gesprek: ""
   });
 
+function handleNext() {
   console.log(advies);
+}
 
   return (
     <main className="min-h-screen bg-red-100 p-10"> 
@@ -58,7 +60,7 @@ export default function Home() {
           </div>
         </section>
        
-       <Link href="/page2" className="mt-8 inline-block rounded-2xl bg-lime-700 px-8 py-4 text-neutral-100">Volgende stap</Link>
+       <Link href="/page2" onClick={handleNext} className="mt-8 inline-block rounded-2xl bg-lime-700 px-8 py-4 text-neutral-100">Volgende stap</Link>
       
       </div>
     </main>

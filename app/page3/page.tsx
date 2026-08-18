@@ -12,10 +12,11 @@ export default function Page3() {
     woonplaats: ""
   });
 
+function handleSubmit() {
   console.log(gegevens);
-
+}
   return (
-    
+
     <main className="min-h-screen bg-red-100 p-10">
       <div className="mx-auto max-w-3xl rounded-2xl bg-white">
         <div className="border-b border-amber-300 p-10">
@@ -26,35 +27,36 @@ export default function Page3() {
 
           <section>
             <label className="text-lg font-bold">Naam</label>
-            <input type="text" placeholder="Uw naam" className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
+            <input type="text" placeholder="Uw naam" value={gegevens.naam} onChange={(e) => setGegevens({...gegevens, naam: e.target.value})} className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
         </section>
 
           <section className="mt-8 grid grid-cols-2 gap-6">
             <div>
               <label className="text-lg font-bold">E-mailadres</label>
-              <input type="email" placeholder="Uw e-mailadres" className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
+              <input type="email" placeholder="Uw e-mailadres" value={gegevens.email} onChange={(e) => setGegevens({...gegevens, email: e.target.value})} className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
             </div>
             <div>
               <label className="text-lg font-bold">Telefoonnummer</label>
-              <input type="tel" placeholder="Uw telefoonnummer" className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
+              <input type="tel" placeholder="Uw telefoonnummer" value={gegevens.telefoon} onChange={(e) => setGegevens({...gegevens, telefoon: e.target.value})} className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
             </div>
           </section>
 
           <section className="mt-8 grid grid-cols-2 gap-6">
             <div>
               <label className="text-lg font-bold">Postcode</label>
-              <input type="text" placeholder="1234 AB" className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
+              <input type="text" placeholder="1234 AB" value={gegevens.postcode} onChange={(e) => setGegevens({...gegevens, postcode: e.target.value})} className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
             </div>
             <div>
               <label className="text-lg font-bold">Woonplaats</label>
-              <input type="text" placeholder="Uw woonplaats" className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
+              <input type="text" placeholder="Uw woonplaats" value={gegevens.woonplaats} onChange={(e) => setGegevens({...gegevens, woonplaats: e.target.value})} className="mt-3 w-full bg-orange-100 rounded-full border p-4"/>
             </div>
           </section>
 
           <p className="mt-5 p-8 text-sm text-gray-500">We vragen dit om de regio/situatie goed in te kunnen schatten.</p>
 
-          <Link href="/page4" className="mt-14 rounded-2xl bg-orange-500 px-10 py-4 font-semibold text-white">Versturen</Link>
-        </div>
+        <Link href="/page4" onClick={handleSubmit} className="mt-14 rounded-2xl bg-orange-500 px-10 py-4 font-semibold text-white">Versturen</Link>       
+ 
+       </div>
       </div>
     </main>
   );
