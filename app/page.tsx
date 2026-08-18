@@ -10,8 +10,12 @@ export default function Home() {
     gesprek: ""
   });
 
+// function handleNext() {
+//   console.log(advies);
+// }
+
 function handleNext() {
-  console.log(advies);
+  localStorage.setItem("formulier", JSON.stringify(advies));
 }
 
   return (

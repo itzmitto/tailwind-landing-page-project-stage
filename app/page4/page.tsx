@@ -17,7 +17,7 @@ export default function Page4() {
     <main className="min-h-screen bg-red-100 p-10">
       <div className="mx-auto max-w-4xl rounded-3xl bg-white p-14 shadow-lg">
         <div>
-          <h1 className="mt-5 text-4xl font-bold">Bedankt voor je aanvraag</h1>
+          <h1 className="mt-5 text-4xl font-bold">4. Bedankt voor je aanvraag</h1>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-600"> We hebben je aanvraag ontvangen en nemen zo snel mogelijk contact met je op. Meestal lukt dit binnen één werkdag. Houd je inbox in de gaten voor een bevestiging.</p>
         </div>
 

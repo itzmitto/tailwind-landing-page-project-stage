@@ -8,8 +8,20 @@ export default function Page2() {
     tekst: ""
   });
 
+// function handleNext() {
+//   console.log(situatie);
+// }
+
 function handleNext() {
-  console.log(situatie);
+  const bestaandeData = localStorage.getItem("formulier");
+  const formulier = bestaandeData ? JSON.parse(bestaandeData) : {};
+
+  const nieuweData = {
+    ...formulier,
+    tekst: situatie.tekst
+  };
+
+  localStorage.setItem("formulier", JSON.stringify(nieuweData));
 }
 
   return (
@@ -30,7 +42,7 @@ function handleNext() {
               placeholder={'Bijvoorbeeld: "We willen onze bestaande stal vervangen door zes paardenboxen met een ruime wasplaats."'}
             />
           </section>
-          
+
           <section className="mt-8">
             <h2 className="text-lg font-bold">Voeg foto’s of tekeningen toe</h2>
             <p className="mt-3 text-lg">Heeft u al foto’s van de huidige situatie, een schets of bouwtekening? Upload deze gerust</p>
