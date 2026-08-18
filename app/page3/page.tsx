@@ -1,7 +1,21 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Page3() {
+  const [gegevens, setGegevens] = useState({
+    naam: "",
+    email: "",
+    telefoon: "",
+    postcode: "",
+    woonplaats: ""
+  });
+
+  console.log(gegevens);
+
   return (
+    
     <main className="min-h-screen bg-red-100 p-10">
       <div className="mx-auto max-w-3xl rounded-2xl bg-white">
         <div className="border-b border-amber-300 p-10">
