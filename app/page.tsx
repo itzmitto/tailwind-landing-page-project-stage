@@ -40,7 +40,7 @@ export default function Home() {
           <div className="mt-4 flex flex-col gap-3">
             <label className="rounded-xl border p-4">
               <input type="radio" name="gesprek" value="telefonisch"/>Telefonisch</label>
-            <label className="rounded-xl border p-4">
+            <label className="rounded-xl border p-4">  
               <input type="radio" name="gesprek" value="showroom"/>In onze showroom</label>
             <label className="rounded-xl border p-4">
               <input type="radio" name="gesprek" value="locatie"/>Op locatie</label>
