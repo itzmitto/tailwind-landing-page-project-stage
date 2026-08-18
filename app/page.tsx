@@ -1,6 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [advies, setAdvies] = useState({
+    advies: "",
+    start: "",
+    gesprek: ""
+  });
+
+  console.log(advies);
+
   return (
     <main className="min-h-screen bg-red-100 p-10"> 
       <div className="mx-auto max-w-3xl rounded-2xl bg-white p-8">
@@ -13,11 +24,11 @@ export default function Home() {
           <h2>Welk advies past het beste bij uw situatie?</h2>
           <div className="mt-4 flex flex-col gap-3">
             <label className="rounded-xl border p-4">
-              <input type="radio" name="advies" value="project"/>Ik heb een concreet project</label>
+              <input type="radio" name="advies" value="project" onChange={(e) => setAdvies({...advies, advies: e.target.value})} />Ik heb een concreet project</label>
             <label className="rounded-xl border p-4">
-              <input type="radio" name="advies" value="regelgeving"/>Ik wil advies over regelgeving</label>
+              <input type="radio" name="advies" value="regelgeving" onChange={(e) => setAdvies({...advies, advies: e.target.value})}/> Ik wil advies over regelgeving</label>
             <label className="rounded-xl border p-4">
-              <input type="radio" name="advies" value="orienteren"/>Ik weet het nog niet precies</label>
+              <input type="radio" name="advies" value="orienteren" onChange={(e) => setAdvies({...advies, advies: e.target.value})} />Ik weet het nog niet precies</label>
           </div>
         </section>
 
@@ -25,13 +36,13 @@ export default function Home() {
           <h2>Wanneer wilt u starten?</h2>
           <div className="mt-4 flex flex-col gap-3">
             <label className="rounded-xl border p-4">
-              <input type="radio" name="start" value="snel"/>Zo snel mogelijk</label>
+              <input type="radio" name="start" value="snel" onChange={(e) => setAdvies({...advies, start: e.target.value})}/>Zo snel mogelijk</label>
             <label className="rounded-xl border p-4">
-              <input type="radio" name="start" value="3-maanden"/>Binnen 3 maanden</label>
+              <input type="radio" name="start" value="3-maanden" onChange={(e) => setAdvies({...advies, start: e.target.value})}/>Binnen 3 maanden</label>
             <label className="rounded-xl border p-4">
-              <input type="radio" name="start" value="later-dit-jaar"/>Later dit jaar</label>
+              <input type="radio" name="start" value="later-dit-jaar" onChange={(e) => setAdvies({...advies, start: e.target.value})}/>Later dit jaar</label>
             <label className="rounded-xl border p-4">
-              <input type="radio" name="start" value="orienteren"/>Ik ben me nog aan het oriënteren</label>
+              <input type="radio" name="start" value="orienteren" onChange={(e) => setAdvies({...advies, start: e.target.value})}/>Ik ben me nog aan het oriënteren</label>
           </div>
 
         </section>
@@ -39,11 +50,11 @@ export default function Home() {
           <h2>Hoe wilt u het gesprek straks voeren?</h2>
           <div className="mt-4 flex flex-col gap-3">
             <label className="rounded-xl border p-4">
-              <input type="radio" name="gesprek" value="telefonisch"/>Telefonisch</label>
+              <input type="radio" name="gesprek" value="telefonisch" onChange={(e) => setAdvies({...advies, gesprek: e.target.value})}/>Telefonisch</label>
             <label className="rounded-xl border p-4">  
-              <input type="radio" name="gesprek" value="showroom"/>In onze showroom</label>
+              <input type="radio" name="gesprek" value="showroom" onChange={(e) => setAdvies({...advies, gesprek: e.target.value})}/>In onze showroom</label>
             <label className="rounded-xl border p-4">
-              <input type="radio" name="gesprek" value="locatie"/>Op locatie</label>
+              <input type="radio" name="gesprek" value="locatie" onChange={(e) => setAdvies({...advies, gesprek: e.target.value})}/>Op locatie</label>
           </div>
         </section>
        
