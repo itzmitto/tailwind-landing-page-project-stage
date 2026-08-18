@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function Page3() {
+export default function Page4() {
   return (
     <main className="min-h-screen bg-red-100 p-10">
       <div className="mx-auto max-w-3xl rounded-2xl bg-white">
         <div className="border-b p-10">
-          <h1 className="text-4xl font-bold">3. Gegevens en afronden</h1>
+          <h1 className="text-4xl font-bold">4. Gegevens en afronden</h1>
           <p className="mt-4 text-lg">Vul uw contactgegevens in zodat wij u kunnen bereiken voor het adviesgesprek.</p>
         </div>
         <div className="p-10">
@@ -39,7 +39,7 @@ export default function Page3() {
 
           <p className="mt-5 text-sm text-gray-500">We vragen dit om de regio/situatie goed in te kunnen schatten.</p>
 
-          <Link href="/page4" className="mt-14 rounded-2xl bg-orange-500 px-10 py-4 font-semibold text-white">Versturen</Link>
+          <Link href="/" className="mt-14 rounded-2xl bg-amber-900 px-10 py-4 font-semibold text-white">Versturen</Link>
         </div>
       </div>
     </main>
