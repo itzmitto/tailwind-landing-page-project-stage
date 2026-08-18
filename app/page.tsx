@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-8">
+        <section className="mt-8">  
           <h2>Wanneer wilt u starten?</h2>
           <div className="mt-4 flex flex-col gap-3">
             <label className="rounded-xl border p-4">
