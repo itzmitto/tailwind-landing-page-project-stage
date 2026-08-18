@@ -12,9 +12,22 @@ export default function Page3() {
     woonplaats: ""
   });
 
+// function handleSubmit() {
+//   console.log(gegevens);
+// }
+
 function handleSubmit() {
-  console.log(gegevens);
+  const bestaandeData = localStorage.getItem("formulier");
+  const formulier = bestaandeData ? JSON.parse(bestaandeData) : {};
+
+  const nieuweData = {
+    ...formulier,
+    ...gegevens
+  };
+
+  localStorage.setItem("formulier", JSON.stringify(nieuweData));
 }
+
   return (
 
     <main className="min-h-screen bg-red-100 p-10">
