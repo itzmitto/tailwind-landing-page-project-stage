@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-red-100 p-10"> 
       <div className="mx-auto max-w-3xl rounded-2xl bg-white p-8">
-        <div className="border-b p-10">
+        <div className="border-b border-amber-300 p-10">
           <h1 className="text-3xl font-bold">1. Vertel ons waar u staat</h1>
           <p>Zo kunnen we het gesprek goed voorbereiden en direct de juiste specialist laten aansluiten.</p>
         </div>
